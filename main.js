@@ -11,7 +11,7 @@ function handleRequest(request, response){
     case "math":
     mathOperators(params, response);
     break;
-    case "letters":
+    case "sentence":
     letterFunctions(params, response);
     break;
     case "gravatar":
@@ -45,7 +45,7 @@ function mathOperators(params, res){
 }
 
 function letterFunctions(params, res){
-  var word = params[3]
+  var word = params[2]
   var strDecoded =  decodeURI(word)
   var strDecodedSplit = strDecoded.split(" ");
   var wordCount = strDecodedSplit.length;
