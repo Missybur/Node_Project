@@ -1,13 +1,9 @@
 "use strict";
 
 var md5 = require('md5');
-
 var http = require('http');
 var PORT = 3000;
-var math = require("./math");
 var server = http.createServer(handleRequest);
-
-
 
 function handleRequest(request, response){
   var params = request.url.split('/');
@@ -70,4 +66,3 @@ function gravatarFunctions(params, res){
 
 server.listen(PORT, function(){
 });
-
